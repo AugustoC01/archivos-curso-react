@@ -1,0 +1,37 @@
+//TERNARY OPERATOR
+const condition = true
+console.log(`La condicion es: ${condition ? 'verdadera' : 'falsa'}`)
+
+//SPREAD OPERATOR
+const nums = [1, 2, 3, 4]
+//ESTO ASEGURA LA INMUTABILIDAD 
+const newNums = [...nums]
+console.log(newNums)
+//AHORA PUEDO MODIFICAR EL NUEVO ARRAY
+//OTRO EJ
+const newNums2  = [...nums, 5, 6]
+console.log(newNums2)
+
+//DESESTRUCTURACION
+const persona = {
+  nombre: 'augusto',
+  edad: 23,
+  telefono: '123456789'
+}
+//DECLARO EL NOMBRE DE LAS PROPS A DESESTRUCTURAR, PUEDEN SER TODAS O ALGUNAS, LAS DEMAS LAS USO COMO OBJETO.PROP
+const { nombre, edad } = persona
+console.log(`${nombre} tiene ${edad} años`)
+console.log(persona.telefono)
+//ESTO TMBN PUEDE USARSE EN UNA FUNCION, PARA DESESTRUCTURAR OBJETOS, PASANDO COMO PARAMETROS LOS NOMBRES DE LAS PROPS
+const  desestructura = ({nombre, edad, telefono}) => {
+  console.log(`Props desestructuradas: ${nombre} ${edad} ${telefono}`)
+}
+//COMO ARGUMENTO DE LA FUNC EL OBJETO
+desestructura(persona)
+
+//DESESTRUCTURAR UN ARRAY
+const [num0, num1, num2, num3] = nums
+console.log(num0)
+console.log(num1)
+console.log(num0, num1, num2, num3)
+//Y ASI SE USAN LOS DATOS, PUEDO DESESTRUCTURAR TODOS O SOLO LOS QUE NECESITO 
